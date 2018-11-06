@@ -1,4 +1,5 @@
-function birthdayCakeCandles(ar) {
+// Below function was incorrect as I was trying to solve the wrong problem
+/* function birthdayCakeCandles(ar) {
     var candleCount = 0;
     
     ar.sort();
@@ -14,6 +15,19 @@ function birthdayCakeCandles(ar) {
         if(temp > candleCount){
             candleCount = temp;
         }}
+    }
+    
+    return candleCount;
+} */
+
+function birthdayCakeCandles(ar) {
+    var max = Math.max.apply(null, ar);
+    var candleCount = 0;
+    
+    for(var i=0; i < ar.length; i++){
+        if (ar[i] == max){
+            candleCount++
+        }
     }
     
     return candleCount;
