@@ -12,7 +12,6 @@ function kangaroo(x1, v1, x2, v2) {
     } else{
         console.log('NO');
     }
-
 }
 
 kangaroo(k1, j1, k2, j2);
