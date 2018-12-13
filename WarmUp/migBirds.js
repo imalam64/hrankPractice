@@ -1,4 +1,4 @@
-const birds = [1, 3, 3, 3, 4, 5, 5, 4, 3, 4, 5, 4, 5];
+const birds = [1,2,3,5,5,5,4,4,4];
 
 function migratoryBirds(arr) {
     let count = [0, 0, 0, 0, 0];
@@ -17,17 +17,20 @@ function migratoryBirds(arr) {
         }
     }
 
-    let max = 0;
-    for(let i = 0; i< count.length; i++){
-        if (count[i] === count[i-1]){
-            max = max;
-        }
-        else if (count[i]> count[i-1]){
-            max = i+1
+    console.log(count)
+
+    let max = Math.max(...count)
+    console.log(max);
+
+    let type = 1;
+    for(let i = 0; i<count.length ; i++){
+        if (count[i] === max){
+            type = type + i;
+            break;
         }
     }
 
-    console.log(max);
+    console.log(type);
 }
 
 migratoryBirds(birds);
